@@ -57,7 +57,7 @@ void loop() {
         {
             if ( kpd.key[i].stateChanged )   // Only find keys that have changed state.
             {
-                switch (kpd.key[i].kchar) {  // Report active key state : IDLE, PRESSED, HOLD, or RELEASED
+                switch (kpd.key[i].kchar) {  
               
                 case '1':
                 if(kpd.key[i].kstate == PRESSED)  Keyboard.print("iastate.edu");
