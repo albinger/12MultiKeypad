@@ -7,8 +7,7 @@ Based on:
    @file MultiKey.ino
    @version 1.0
    @author Mark Stanley
-   @contact mstanley@technologist.com
-
+  
 || @description
 || | The latest version, 3.0, of the keypad library supports up to 10
 || | active keys all being pressed at the same time. This sketch is a
@@ -70,7 +69,7 @@ void loop() {
                 Keyboard.release(KEY_M);
                 Keyboard.release(MODIFIERKEY_GUI);
                 }
-               break;
+				break;
   
                 case '3':
                 if(kpd.key[i].kstate == PRESSED)   
@@ -80,80 +79,76 @@ void loop() {
                 }
                 break;
   
-				        case '4':
-				        if(kpd.key[i].kstate == PRESSED)  Mouse.scroll(1);
-				        break;
+				case '4':
+				if(kpd.key[i].kstate == PRESSED)  Mouse.scroll(1);
+				break;
   
-				        case '5':
-				        if(kpd.key[i].kstate == PRESSED)  Keyboard.print("albinger@iastate.edu");
-				        break;
+				case '5':
+				if(kpd.key[i].kstate == PRESSED)  Keyboard.print("albinger@iastate.edu");
+				break;
 
-				        case '6':
-				        if(kpd.key[i].kstate == PRESSED)  Keyboard.print("andrew.albinger@gmail.com");
-				        break;
+				case '6':
+				if(kpd.key[i].kstate == PRESSED)  Keyboard.print("andrew.albinger@gmail.com");
+				break;
 
-				        case '7':
-				        if(kpd.key[i].kstate == PRESSED)  {
-                  if(Shifted)
-                  {
-                    Keyboard.press(KEY_MEDIA_MUTE);
-                    Keyboard.release(KEY_MEDIA_MUTE);
-                  } else {
-					          Keyboard.press(KEY_MEDIA_VOLUME_DEC);
-					          Keyboard.release(KEY_MEDIA_VOLUME_DEC);
-                  }
-				        } else if (kpd.key[i].kstate == HOLD) {
+				case '7':
+				if(kpd.key[i].kstate == PRESSED)  {
+					if(Shifted)
+					{
+						Keyboard.press(KEY_MEDIA_MUTE);
+						Keyboard.release(KEY_MEDIA_MUTE);
+					} else {
+						Keyboard.press(KEY_MEDIA_VOLUME_DEC);
+					    Keyboard.release(KEY_MEDIA_VOLUME_DEC);
+					}
+				} else if (kpd.key[i].kstate == HOLD) {
                     Keyboard.press(KEY_MEDIA_MUTE);
                     Keyboard.release(KEY_MEDIA_MUTE);
                 }
-				        break;
+				break;
 
-				        case '8':
-				        if(kpd.key[i].kstate == PRESSED)  Mouse.scroll(-1);
-				        break;
+				case '8':
+				if(kpd.key[i].kstate == PRESSED)  Mouse.scroll(-1);
+				break;
   
-				        case '9':
-				        if(kpd.key[i].kstate == PRESSED)  {
-					        if(Shifted){
-						        Keyboard.print("login.iastate.edu\n\n");
-					        }else{
-						        Keyboard.print("\n-Andrew\n\n");
-					        }
-				        }
-				        break;
+				case '9':
+				if(kpd.key[i].kstate == PRESSED)  {
+					if(Shifted){
+						Keyboard.print("login.iastate.edu\n\n");
+					}else{
+						 Keyboard.print("\n-Andrew\n\n");
+					}
+				}
+				break;
 
-				        case 'a':
-				        if(kpd.key[i].kstate == PRESSED)  {
-					        Keyboard.press(MODIFIERKEY_CTRL);
-					        Keyboard.press(KEY_C);
-					        Keyboard.release(KEY_C);
-					        Keyboard.release(MODIFIERKEY_CTRL);
-					       }
-				        break;
+				case 'a':
+				if(kpd.key[i].kstate == PRESSED)  {
+					Keyboard.press(MODIFIERKEY_CTRL);
+					Keyboard.press(KEY_C);
+					Keyboard.release(KEY_C);
+					Keyboard.release(MODIFIERKEY_CTRL);
+				}
+				break;
 
-				        case 'b':
-				        if(kpd.key[i].kstate == PRESSED)  {
-					        Keyboard.press(MODIFIERKEY_CTRL);
-					        Keyboard.press(KEY_V);
-					        Keyboard.release(KEY_V);
-					        Keyboard.release(MODIFIERKEY_CTRL);
-				        }
-				        break;
+				case 'b':
+				if(kpd.key[i].kstate == PRESSED)  {
+					Keyboard.press(MODIFIERKEY_CTRL);
+					Keyboard.press(KEY_V);
+					Keyboard.release(KEY_V);
+					Keyboard.release(MODIFIERKEY_CTRL);
+				}
+				break;
 
   
-				        case 'c':
-				        if(kpd.key[i].kstate == PRESSED)   Shifted = true;
-				        if(kpd.key[i].kstate == RELEASED)  Shifted = false;
+				case 'c':
+				if(kpd.key[i].kstate == PRESSED)   Shifted = true;
+				if(kpd.key[i].kstate == RELEASED)  Shifted = false;
+				break;
   
-				        break;
-  
-  
-				        default:
-				        break;
+				default:
+				break;
                 }
             }
         }
     }
 }
-				    
-    
