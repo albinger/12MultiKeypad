@@ -30,9 +30,9 @@ const byte COLS = 3; //three columns
 
 char keys[ROWS][COLS] = {
 	{'4','8','c'},
-	3','7','b'},
+	{'3','7','b'},
 	{'2','6','a'},
-	1','5','9'}
+	{'1','5','9'}
 };
 byte rowPins[ROWS] = {6, 5, 4, 3}; //connect to the row pinouts of the keypad
 byte colPins[COLS] = {1, 0,2}; //connect to the column pinouts of the keypad
