@@ -64,10 +64,17 @@ if (kpd.getKeys())
 
 			case '2':
 			if(kpd.key[i].kstate == PRESSED)  {
+        if(Shifted){
+          Keyboard.press(MODIFIERKEY_GUI);
+          Keyboard.press(KEY_PRINTSCREEN);
+          Keyboard.release(KEY_PRINTSCREEN);
+          Keyboard.release(MODIFIERKEY_GUI);
+        }else{
 				Keyboard.press(MODIFIERKEY_GUI);
-				Keyboard.press(KEY_M);
-				Keyboard.release(KEY_M);
+				Keyboard.press(KEY_D);
+				Keyboard.release(KEY_D);
 				Keyboard.release(MODIFIERKEY_GUI);
+        }
 			}
 			break;
 
@@ -128,6 +135,12 @@ if (kpd.getKeys())
 				Keyboard.release(KEY_C);
 				Keyboard.release(MODIFIERKEY_CTRL);
 			}
+     if(kpd.key[i].kstate == HOLD)  {
+        Keyboard.press(MODIFIERKEY_CTRL);
+        Keyboard.press(KEY_X);
+        Keyboard.release(KEY_X);
+        Keyboard.release(MODIFIERKEY_CTRL);
+      }
 			break;
 
 			case 'b':
